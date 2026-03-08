@@ -440,19 +440,30 @@ td{
 
 /*Confirmation*/
 
+.confirmation{
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
 .fa-regular.fa-thumbs-up{
-    font-size: 12rem;
+    font-size: 100px;
     color: #2ecc71;
 }
 
 .confirmation h1{
     color: #113340;
     text-transform: capitalize;
-    font-size: 3rem;
+    font-size: 30px;
 }
 
 .confirmation p{
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.5px;
 }
 
 
@@ -558,7 +569,22 @@ td{
         max-width: 100%;
     }
 
+    /*confirmation*/
+    .fa-regular.fa-thumbs-up{
+        font-size: 120px;
+        color: #2ecc71;
+}
 
+    .confirmation h1{
+        color: #113340;
+        text-transform: capitalize;
+        font-size: 40px;
+    }
+
+    .confirmation p{
+        font-size: 18px;
+        letter-spacing: 0.5px;
+    }
 
 }
 
@@ -608,6 +634,23 @@ td{
 
     .available_products h3{
         min-height: 50px;
+    }
+
+    /*confirmation*/
+    .fa-regular.fa-thumbs-up{
+        font-size: 130px;
+        color: #2ecc71;
+}
+
+    .confirmation h1{
+        color: #113340;
+        text-transform: capitalize;
+        font-size: 45px;
+    }
+
+    .confirmation p{
+        font-size: 20px;
+        letter-spacing: 0.5px;
     }
 
 }

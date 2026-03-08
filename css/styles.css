@@ -11,6 +11,10 @@ html, body{
     font-family: "Inria sans", Verdana, Geneva, Tahoma, sans-serif ;
 }
 
+main{
+    padding: 30px 0 40px;
+}
+
 header{
     background-color:#113340;
     color: white;
@@ -96,9 +100,6 @@ a{
 
 .cta-small {
     padding: 5px 16px;
-    grid-column:2;
-    grid-row: 3/5;
-    align-self: center;
     margin-top: 25px;
 }
 
@@ -197,7 +198,7 @@ footer{
 .starter_text{
     letter-spacing: 3px;
     text-align: center;
-    margin-top:0;
+    margin-bottom: 20px;
     font-size: 16px;
 }
 
@@ -207,15 +208,15 @@ footer{
     border: 1px solid #757575;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
     padding: 15px;
-    gap: 12px;
-    align-content: start;
+    gap: 10px;
     background-color: #fff;
+    text-align:center;
 }
 .available_products img{
     width: 100%;
-    max-width: 180px;
+    max-width: 160px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -236,7 +237,8 @@ footer{
 
 .avaliable{
     width: 100%;
-    margin: 0 auto 40px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 16px;
     display: grid;
     grid-template-columns: 1fr;
@@ -244,7 +246,11 @@ footer{
     box-sizing: border-box;
 }
 
-
+.available_products a{
+    display: inline-block;
+    justify-self:center;
+    min-width: 140px;
+}
 
 .avaliable h2{
     margin: 0px;
@@ -261,43 +267,50 @@ footer{
 /*about us page */
 .aboutus{
     max-width: 1000px;
-    margin-bottom: 50px;
-    padding: 10px;
+    margin: 0 auto 50px;
+    padding: 0 16px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 10px;
 }
 .aboutus h1{
-  grid-column: 1/-1;
+    margin: 0;
+    font-size: 20px;
 }
 
 .aboutus img{
     width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
 .aboutus p{
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin-bottom: 12px;
 }
 /*product details page */
 .product{
     max-width: 1000px;
-    border-style:solid;
-    border-color: #757575;
+    margin: 40px auto;
+    padding: 20px;
+    border:1px solid #757575;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 50px auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: #fff;
     
 }
 
 .product img{
     width: 100%;
     height: auto;
-    max-height: 200px;
+    max-height: 280px;
     object-fit: contain;
-    grid-column: -1/1;
-    margin-left: 10px;
-    padding: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 .price{
@@ -306,18 +319,33 @@ footer{
 }
 
 .form-row{
-    grid-column: 1/-1;
+    display: grid;
+    gap: 10px;
+}
+
+.form-row label{
+    font-weight: 600;
+}
+
+.form-row select{
     padding: 10px;
-    margin-left: 10px;
+    font-size: 16px;
 }
 .product-info{
     grid-column: 1 / -1;
     padding: 10px;
 }
-.product-info h3, 
+.product-info h3{
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 1.3;
+}
+
 .product-info p{
-    grid-column: 1 / -1;
-    margin-left: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+
 }
 
 .action-button{
@@ -328,17 +356,15 @@ footer{
     gap: 10px;
     align-items: center;
 }
-.wishlist-button{
+
+.wishlist_button{
     border: none; 
     background: none;
     cursor: pointer;
     color: #113340;
-    font-size: 15px;
+    font-size: 24px;
 }
 
-.product-info p{
-    letter-spacing: 1.5px;
-}
 
 
 /*cart page*/
@@ -429,12 +455,7 @@ td{
   letter-spacing: 0.3rem;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+
 
 @media (min-width: 768px){
     .menu_icon{
@@ -503,10 +524,46 @@ main{
     .footer_companylogo{
         width: 170px;
     }
+  
+    /*product page*/
+
+    .avaliable{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .available_products img{
+        max-width: 180px;
+    }
+
+    /*product details page */
+
+    .product{
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .product-info{
+        grid-column: 2;
+    }
+
+    .form-row{
+        grid-column: 2;
+    }
+
+    .action-button{
+        grid-column: 2;
+    }
+
+    .product img{
+        max-width: 100%;
+    }
+
+
+
 }
 
 
-@media (min-width: 1024){
+@media (min-width: 1024px){
     .navbar{
         padding: 20px 20px;
     }
@@ -537,4 +594,20 @@ main{
     .footer_links{
         font-size: 25px;
     }
+
+
+
+/*product page*/
+
+    .avaliable{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .available_products{
+        height: 100%;
+    }
+
+    .available_products h3{
+        min-height: 50px;
+    }
+
 }
